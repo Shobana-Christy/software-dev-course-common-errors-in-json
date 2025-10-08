@@ -1,65 +1,17 @@
-/*
-===========================================
-🏨 JSON Syntax Debugging: Hotel Booking Data
-===========================================
-
-🎯 Objective:
-Students will analyze a JSON file containing multiple syntax errors,
-identify the issues, and correct them.
-
-This activity helps practice spotting and fixing common JSON mistakes such as:
-- Missing commas
-- Incorrect use of quotation marks
-- Unmatched brackets/braces
-- Trailing commas
-- Invalid data types
-*/
-
-
-// ============================================
-// 🧭 Instructions:
-// ============================================
-
-/*
-📘 Scenario:
-You’re a developer on a team building a travel booking API.
-
-A teammate submitted a JSON file to represent a hotel booking, 
-but it contains multiple syntax errors that prevent it from being parsed.
-
-🔧 Your Task:
-1️⃣ Review the provided JSON file
-2️⃣ Identify all syntax errors
-3️⃣ Write down what each error is and why it causes a problem
-4️⃣ Correct the JSON structure so that it is valid
-5️⃣ Validate your corrected version using a JSON linter or validator
-
-🧪 Deliverables:
-- A corrected version of the JSON
-- A list of the corrections made and why each was necessary
-*/
-
-
-// ============================================
-// 🔍 Provided JSON File with Errors
-// ============================================
-
-const invalidBookingJSON = `       // removed declaring variable name -- 
-                                   //  they are meant for data storage not executable code
-{
+                                         // removed declaring variable name -- they are meant for data storage not executable code
 {
   "hotelName": "Grand City Hotel",
-  "checkInDate": "2024-05-15"         // fixed commas
+  "checkInDate": "2024-05-15",            // fixed commas
   "checkOutDate": "2024-05-20",
   "guests": [
     {
-      name: "Alice Johnson",            //fixed double quotes 
+      "name": "Alice Johnson",           //fixed double quotes 
       "age": 30,
       "email": "alice.johnson@example.com"
     },
     {
       "name": "Bob Smith",
-      "age": undefined,                     // unsupported type with valid json types.
+      "age": null,                          // unsupported type with valid json types.
                                              // So used null instead of undefined
       "email": "bob.smith@example"
     }
@@ -67,22 +19,15 @@ const invalidBookingJSON = `       // removed declaring variable name --
   "roomDetails": {
     "type": "Suite",
     "pricePerNight": 200,
-    "amenities": ["WiFi", "Breakfast", "Parking",]     //removed comma after the last element
+    "amenities": ["WiFi", "Breakfast", "Parking"]  //removed comma after the element
   }
 }
-`;
 
 
-// ============================================
-// ✅ Requirements
-// ============================================
-
-/*
-- Use a JSON validator or linter (e.g., https://jsonlint.com/) to test your final version
-- Keep track of each fix:
 
 
-   Error 1 - Variable Declaration
+
+Error 1 - Variable Declaration
      • What was wrong?
        JSON is declared in variable const.
 
@@ -167,7 +112,7 @@ const invalidBookingJSON = `       // removed declaring variable name --
 4️⃣ What strategies can help you avoid these kinds of errors in the future?
    (e.g., syntax highlighting, linters, writing JSON by example)
         Using syntax highlighting, linters and editors can help prevent errors.
-        Also understanding where the error occurs and writing JSON example 
+        Also understanding where the error occurs and writing JSON examples 
         can make the process easier and help to avoid  errors in the future.
        
 
