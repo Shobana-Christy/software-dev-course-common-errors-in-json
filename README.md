@@ -112,7 +112,7 @@ Error 1 - Variable Declaration
 4️⃣ What strategies can help you avoid these kinds of errors in the future?
    (e.g., syntax highlighting, linters, writing JSON by example)
         Using syntax highlighting, linters and editors can help prevent errors.
-        Also understanding where the error occurs and writing JSON example 
+        Also understanding where the error occurs and writing JSON examples 
         can make the process easier and help to avoid  errors in the future.
        
 
